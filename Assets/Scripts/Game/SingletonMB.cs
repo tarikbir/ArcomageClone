@@ -19,7 +19,7 @@ namespace ArcomageClone
         void HandleDuplication()
         {
             //if not null we grab all possible objects of this type
-            var allSingletonsOfThis = FindObjectsOfType(typeof(T));
+            var allSingletonsOfThis = FindObjectsByType(typeof(T), FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 
             if (_isSilent)
             {
